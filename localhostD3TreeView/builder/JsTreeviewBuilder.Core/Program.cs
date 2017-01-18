@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace JsTreeviewBuilder
+namespace JsTreeviewBuilder.Core
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -28,6 +27,5 @@ namespace JsTreeviewBuilder
             Console.WriteLine("Press any key to finish ...");
             Console.ReadKey();
         }
-
     }
 }

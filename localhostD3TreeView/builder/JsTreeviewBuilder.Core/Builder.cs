@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace JsTreeviewBuilder
+namespace JsTreeviewBuilder.Core
 {
     class Builder
     {
@@ -19,7 +19,7 @@ namespace JsTreeviewBuilder
 
             var jsonStr = jsonTopObject.ToString();
 
-            var htmlTemplateStr = EmbeddedResources.GetEmbeddedResource(this.GetType(), "index.htm");
+            var htmlTemplateStr = File.ReadAllText("index.htm");
             var htmlStr = htmlTemplateStr.Replace("[[[data]]]", jsonStr);
             File.WriteAllText(_outputHtmlPath, htmlStr);
         }
